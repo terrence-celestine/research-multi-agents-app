@@ -22,6 +22,9 @@
   "dependencies": {
     "@google/genai": "^2.8.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
+    "@types/pdfkit": "^0.17.6",
+    "docx": "^9.7.1",
+    "pdfkit": "^0.19.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {
