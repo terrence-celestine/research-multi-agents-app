@@ -145,7 +145,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const rawDraft = await askSubAgent(
       copywriterPersona, 
       `Write exactly 3 paragraph explaining the topic for ${audience} using this outline:\n\n${outline}`,
-      3000
+      10000
     );
 
     // 🤖 AGENT 3: Strict Copy Editor (Editorial Polish)
@@ -154,7 +154,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     const polishedOutput = await askSubAgent(
       editorPersona,
       `Polished and line-edit this raw draft copy for an audience of ${audience}:\n\n${rawDraft}`
-      ,3000
+      ,10000
     );
 
     process.stderr.write(`✅ [MCP SYSTEM] Complete 3-agent chain executed perfectly!\n\n`);
